@@ -1,0 +1,31 @@
+{
+  "name": "g26",
+  "version": "1.0.0",
+  "description": "website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alirioguerra/g26.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "gulp"
+  ],
+  "author": "Alírio Guerra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alirioguerra/g26/issues"
+  },
+  "homepage": "https://github.com/alirioguerra/g26#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "node-sass": "^6.0.1"
+  },
+  "dependencies": {}
+}

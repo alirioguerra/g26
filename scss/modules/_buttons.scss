@@ -1,0 +1,10 @@
+.btn {
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $primary;
+  color: $white;
+  padding: rem-calc(15 40);
+  letter-spacing: rem-calc(4);
+  @include bold(18);
+}

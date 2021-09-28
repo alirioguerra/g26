@@ -1,0 +1,22 @@
+$primary: #FCAF16;
+$black: #4D4D4D;
+$white: #FFFFFF;
+
+@mixin regular($size: $rem-base) {
+  font-family: 'Gotham Book', sans-serif;
+  font-weight: 400;
+  font-size: rem-calc($size);
+}
+
+@mixin medium($size: $rem-base) {
+  font-family: 'Gotham Medium', sans-serif;
+  font-weight: 500;
+  font-size: rem-calc($size);
+}
+
+@mixin bold($size: $rem-base) {
+  font-family: 'Gotham Bold', sans-serif;
+  font-weight: 700;
+  font-size: rem-calc($size);
+}
+

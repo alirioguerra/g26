@@ -1,5 +1,7 @@
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   text-transform: uppercase;
   background-color: $primary;
@@ -7,4 +9,24 @@
   padding: rem-calc(15 40);
   letter-spacing: rem-calc(4);
   @include bold(18);
+  
+  img {
+    max-width: rem-calc(22);
+    margin-right: rem-calc(16);
+  }
+  
+  &:hover {
+    animation: shadow-move 0.3s ease-in both;
+  }
+}
+
+@-webkit-keyframes shadow-move {
+  0% {
+    box-shadow: 0 0 $black;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    box-shadow: 7px 7px $black;
+    transform: translate3d(-7px, -7px, 0);
+  }
 }

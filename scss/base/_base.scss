@@ -4,8 +4,67 @@ body,html {
   color: $black;
 }
 
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
+}
+
+p {
+  @include regular(25);
+  line-height: rem-calc(36);
+}
+
+section {
+  padding: rem-calc(100 0);
+}
+
+.ornamented-paragraph {
+  position: relative;
+  padding: rem-calc(0 0 0 40);
+
+  &::before {
+    content: '';
+    display: block;
+    width: rem-calc(10);
+    height: 100%;
+    background-color: $primary;
+    position: absolute;
+    left: 0;
+  }
+}
+
+.basic-title {
+  @include bold(40);
+  letter-spacing: rem-calc(4);
+  line-height: rem-calc(42);
+  text-transform: uppercase;
+  color: $black;
+  margin-bottom: rem-calc(20);
+}
+
+.basic-subtitle {
+  @include medium(25);
+  letter-spacing: rem-calc(0);
+  line-height: rem-calc(30);
+  text-transform: uppercase;
+  color: $black;
+}
+
+.quote {
+  @include medium(33);
+  line-height: rem-calc(40);
+  text-transform: uppercase;
+  color: $black;
+  margin: rem-calc(80 0 0 0);
+
+  strong {
+    @include bold(30);
+    color: $primary
+  }
 }
 
 .container {
@@ -15,3 +74,61 @@ a {
   padding-left: rem-calc(15);
   padding-right: rem-calc(15);
 }
+
+// header
+.main-header {
+  background: $white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: rem-calc(15 0);
+  transition: width .45s ease;
+  z-index: 999;
+  
+  &.scrolled {
+    padding: rem-calc(5 0);
+    
+    a img {
+      width: 70%;
+    }
+  }
+  
+  a img {
+    width: 100%;
+    transition: width .45s ease;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+// hero
+#main-hero {
+  background-image: url('../../assets/images/home-hero.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+  
+  h1 {
+    @include bold(95)
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: rem-calc(12);
+    margin: 0;
+  }
+  
+  span {
+    @include medium(30);
+    color: $white;
+    text-transform: uppercase;
+  }
+}
+

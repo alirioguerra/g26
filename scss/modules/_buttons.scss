@@ -5,18 +5,28 @@
   text-align: center;
   text-transform: uppercase;
   background-color: $primary;
-  color: $white;
-  padding: rem-calc(15 40);
-  letter-spacing: rem-calc(4);
+  color: $black;
+  padding: rem-calc(10 40);
+  letter-spacing: rem-calc(2);
+  border: 2px solid $black;
   @include bold(18);
   
-  img {
-    max-width: rem-calc(22);
+  svg {
+    transform: scale(.7);
     margin-right: rem-calc(16);
   }
   
   &:hover {
     animation: shadow-move 0.3s ease-in both;
+  }
+  
+  &-secondary {
+    background-color: $white;
+    color: $black;
+
+    &:hover {
+      animation: shadow-move 0.3s ease-in both;
+    }
   }
 }
 
@@ -30,3 +40,4 @@
     transform: translate3d(-7px, -7px, 0);
   }
 }
+

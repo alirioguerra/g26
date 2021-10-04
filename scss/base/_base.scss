@@ -11,6 +11,16 @@ h1,h2,h3,h4,h5,h6 {
 
 a {
   text-decoration: none;
+  color: $black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .45s ease;
+  @include medium(18);
+  
+  svg {
+    margin-right: rem-calc(10);
+  }
 }
 
 p {
@@ -18,14 +28,20 @@ p {
   line-height: rem-calc(36);
 }
 
-section {
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+section[padding] {
   padding: rem-calc(100 0);
 }
 
 .ornamented-paragraph {
   position: relative;
   padding: rem-calc(0 0 0 40);
-
+  
   &::before {
     content: '';
     display: block;
@@ -44,6 +60,10 @@ section {
   text-transform: uppercase;
   color: $black;
   margin-bottom: rem-calc(20);
+  
+  &[spaced] {
+    margin-top: rem-calc(30);
+  }
 }
 
 .basic-subtitle {
@@ -60,7 +80,7 @@ section {
   text-transform: uppercase;
   color: $black;
   margin: rem-calc(80 0 0 0);
-
+  
   strong {
     @include bold(30);
     color: $primary
@@ -82,14 +102,19 @@ section {
   top: 0;
   width: 100%;
   padding: rem-calc(15 0);
-  transition: width .45s ease;
+  transition: all .45s ease;
   z-index: 999;
   
   &.scrolled {
-    padding: rem-calc(5 0);
+    padding: rem-calc(10 0);
+    box-shadow: rem-calc(1 2 5 ) transparentize($black, .8);
+    
+    a {
+      transform: scale(.8);
+    }
     
     a img {
-      width: 70%;
+      max-width: rem-calc(130);
     }
   }
   
@@ -130,5 +155,212 @@ section {
     color: $white;
     text-transform: uppercase;
   }
+}
+
+// about
+#about {
+  background-image: url('../../assets/images/about-hero.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  
+  
+  &-content {
+    max-width: rem-calc(700);
+    
+    &:after {
+      content: '';
+      display: block;
+      width: 15vw;
+      height: 100%;
+      background-color: $primary;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    
+    h2 {
+      @include bold(40);
+      line-height: rem-calc(40);
+      color: $white;
+      text-transform: uppercase;
+      margin: rem-calc(0 0 50 0);
+    }
+    
+    ul li p {
+      color: $white;
+    }
+  }
+}
+
+.main-carousel {
+  background-color: $primary;
+  padding: rem-calc(100 20);
+  max-width: rem-calc(460);
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  
+  .carousel-cell {
+    width: 100%;
+    p {
+      max-width: rem-calc(340);
+      font-size: rem-calc(18);
+      line-height: rem-calc(21);
+      color: $white;
+    }
+    span {
+      color: transparentize($white, .5);
+      @include regular(18);
+    }
+  }
+}
+
+#marquee {
+  background-color: $primary;
+  padding: rem-calc(75 0);
+  margin: rem-calc(50 0);
+}
+
+.marquee {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: 50px;
+  overflow-x: hidden;
+  padding: rem-calc(20 0);
+}
+
+.track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 22s linear infinite;
+}
+
+.content {
+  span {
+    color: $white;
+    @include bold(40);
+    margin-right: rem-calc(80);
+  }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+//partners 
+
+#partners {
+  
+  &-content {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: rem-calc(50 0);
+    
+    img {
+      max-width: rem-calc(200);
+      justify-self: center;
+    }
+  }
+  
+  .bottom-line,
+  .top-line {
+    position: relative;
+    width: 100%;
+    max-width: rem-calc(1200);
+    border-bottom: 1px solid $black;
+    
+    &::after, &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 1px;
+      height: 40px;
+      background-color: $black;
+    }
+    
+    &::after {
+      right: 0;
+    }
+  }
+  
+  .bottom-line {
+    &::after, &::before {
+      top: -40px;
+    }
+  }
+}
+
+// footer
+#main-footer {
+  background-color: $primary;
+  padding: rem-calc(100 0);
+  
+  &--contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem-calc(200);
+    align-items: center;
+    
+    h2 {
+      @include bold(70);
+      line-height: rem-calc(70);
+      text-transform: uppercase;
+      color: $white;
+    }
+    
+    &__form {
+      display: flex;
+      flex-direction: column;
+      
+      input, textarea {
+        background-color: transparent;
+        color: $white;
+        border: 2px solid $white;
+        padding: rem-calc(15 10);
+        margin-bottom: rem-calc(30);
+        @include regular(20);
+        
+        &::placeholder {
+          color: $white;
+        }
+        
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+  
+  #copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: rem-calc(130);
+    
+    &-text {
+      text-transform: uppercase;
+      @include medium(16);
+    }
+  }
+}
+
+.flickity-prev-next-button {
+  top: 85%;
+  z-index: 99;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.flickity-prev-next-button.previous {
+  left: 80%;
 }
 

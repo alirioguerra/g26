@@ -1,8 +1,4 @@
-(function () {
- new LocomotiveScroll({
-  smooth: true
- });
-})();
+AOS.init();
 
 (() => {
   window.addEventListener("scroll", () => {
@@ -15,3 +11,10 @@
    }
 });
 })();
+
+
+const tl = gsap.timeline(), 
+    title = new SplitText("#hero-text", {type:"words"}), 
+    words = title.words;
+
+tl.from(words, {duration: 1.2, opacity:0, x:-40, ease:"back", stagger: 0.2});

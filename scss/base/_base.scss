@@ -26,6 +26,11 @@ a {
 p {
   @include regular(25);
   line-height: rem-calc(36);
+  
+  @media only screen and (max-width: rem-calc(900)) {
+    @include regular(18);
+    line-height: rem-calc(20);
+  }
 }
 
 ul {
@@ -36,11 +41,19 @@ ul {
 
 section[padding] {
   padding: rem-calc(100 0);
+  
+  @media only screen and (max-width: rem-calc(900)) {
+    padding: rem-calc(30 0);
+  }
 }
 
 .ornamented-paragraph {
   position: relative;
   padding: rem-calc(0 0 0 40);
+  
+  @media only screen and (max-width: rem-calc(900)) {
+    padding: rem-calc(0 0 0 20);
+  }
   
   &::before {
     content: '';
@@ -61,6 +74,12 @@ section[padding] {
   color: $black;
   margin-bottom: rem-calc(20);
   
+  @media only screen and (max-width: rem-calc(900)) {
+    @include bold(22);
+    letter-spacing: rem-calc(2);
+    line-height: rem-calc(22);
+  }
+  
   &[spaced] {
     margin-top: rem-calc(30);
   }
@@ -72,6 +91,11 @@ section[padding] {
   line-height: rem-calc(30);
   text-transform: uppercase;
   color: $black;
+  
+  @media only screen and (max-width: rem-calc(900)) {
+    @include bold(18);
+    line-height: rem-calc(18);
+  }
 }
 
 .quote {
@@ -81,18 +105,34 @@ section[padding] {
   color: $black;
   margin: rem-calc(80 0 0 0);
   
+  @media only screen and (max-width: rem-calc(900)) {
+    @include medium(22);
+    line-height: rem-calc(26);
+    text-transform: uppercase;
+    margin: rem-calc(40 0 0 0);
+  }
+  
   strong {
-    @include bold(30);
-    color: $primary
+    @include bold(33);
+    color: $primary;
+    
+    @media only screen and (max-width: rem-calc(900)) {
+      @include bold(22);
+      line-height: rem-calc(26);
+    }
   }
 }
 
 .container {
-  width: 100%;
-  max-width: rem-calc(1200);
   margin: 0 auto;
   padding-left: rem-calc(15);
+  max-width: rem-calc(1200);
   padding-right: rem-calc(15);
+  
+  
+  @media only screen and (max-width: rem-calc(900)) {
+    max-width: 100%;
+  }
 }
 
 // header
@@ -115,12 +155,20 @@ section[padding] {
     
     a img {
       max-width: rem-calc(130);
+      
+      @media only screen and (max-width: rem-calc(900)) {
+        max-width: rem-calc(100);
+      }
     }
   }
   
   a img {
     width: 100%;
     transition: width .45s ease;
+    
+    @media only screen and (max-width: rem-calc(900)) {
+      max-width: rem-calc(100);
+    }
   }
   
   nav {
@@ -139,8 +187,12 @@ section[padding] {
   min-height: 100vh;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: center; 
   
+  @media only screen and (max-width: rem-calc(900)) {
+    min-height: 60vh;
+    padding-top: rem-calc(70);
+  }
   
   h1 {
     @include bold(95)
@@ -148,12 +200,22 @@ section[padding] {
     text-transform: uppercase;
     letter-spacing: rem-calc(12);
     margin: 0;
+    
+    @media only screen and (max-width: rem-calc(900)) {
+      @include bold(45)
+      line-height: rem-calc(45);
+      letter-spacing: rem-calc(2);
+    }
   }
   
   span {
     @include medium(30);
     color: $white;
     text-transform: uppercase;
+    
+    @media only screen and (max-width: rem-calc(900)) {
+      @include medium(18)
+    }
   }
 }
 
@@ -165,7 +227,6 @@ section[padding] {
   background-size: cover;
   position: relative;
   z-index: 0;
-  
   
   &-content {
     max-width: rem-calc(700);
@@ -188,6 +249,11 @@ section[padding] {
       color: $white;
       text-transform: uppercase;
       margin: rem-calc(0 0 50 0);
+      
+      @media only screen and (max-width: rem-calc(900)) {
+        @include bold(22);
+        line-height: rem-calc(22);
+      }
     }
     
     ul li p {
@@ -204,6 +270,10 @@ section[padding] {
   position: absolute;
   right: 0;
   top: 0;
+
+  @media only screen and (max-width: rem-calc(900)) {
+    display: none;
+  }
   
   .carousel-cell {
     width: 100%;
@@ -224,6 +294,11 @@ section[padding] {
   background-color: $primary;
   padding: rem-calc(75 0);
   margin: rem-calc(50 0);
+  
+  @media only screen and (max-width: rem-calc(900)) {
+    padding: rem-calc(35 0);
+    margin: rem-calc(20 0);
+  }
 }
 
 .marquee {
@@ -233,6 +308,11 @@ section[padding] {
   height: 50px;
   overflow-x: hidden;
   padding: rem-calc(20 0);
+  
+  @media only screen and (max-width: rem-calc(900)) {
+    height: 30px;
+    padding: rem-calc(10 0);
+  }
 }
 
 .track {
@@ -244,9 +324,14 @@ section[padding] {
 
 .content {
   span {
-    color: $white;
     @include bold(40);
+    color: $white;
     margin-right: rem-calc(80);
+    
+    @media only screen and (max-width: rem-calc(900)) {
+      @include bold(20);
+      margin-right: rem-calc(40);
+    }
   }
 }
 
@@ -265,9 +350,18 @@ section[padding] {
     grid-template-columns: 1fr 1fr 1fr;
     padding: rem-calc(50 0);
     
+    @media only screen and (max-width: rem-calc(900)) {
+      grid-template-columns: 1fr;
+      padding: rem-calc(10 0);
+    }
+    
     img {
       max-width: rem-calc(200);
       justify-self: center;
+      
+      @media only screen and (max-width: rem-calc(900)) {
+        max-width: rem-calc(150);
+      }
     }
   }
   
@@ -310,16 +404,32 @@ section[padding] {
     gap: rem-calc(200);
     align-items: center;
     
+    @media only screen and (max-width: rem-calc(900)) {
+      grid-template-columns: 1fr;
+      gap: rem-calc(0);
+    }
+    
     h2 {
       @include bold(70);
       line-height: rem-calc(70);
       text-transform: uppercase;
       color: $white;
+      
+      @media only screen and (max-width: rem-calc(900)) {
+        @include bold(60);
+        line-height: rem-calc(60);
+        margin-bottom: rem-calc(30);
+      }
     }
     
     &__form {
       display: flex;
       flex-direction: column;
+      
+      @media only screen and (max-width: rem-calc(900)) {
+        max-width: rem-calc(345);
+        order: 2;
+      }
       
       input, textarea {
         background-color: transparent;
@@ -346,9 +456,19 @@ section[padding] {
     align-items: baseline;
     margin-top: rem-calc(130);
     
+    @media only screen and (max-width: rem-calc(900)) {
+      flex-direction: column;
+      align-items: center;
+      margin-top: rem-calc(60);
+    }
+    
     &-text {
       text-transform: uppercase;
       @include medium(16);
+      
+      @media only screen and (max-width: rem-calc(900)) {
+        @include medium(12);
+      }
     }
   }
 }

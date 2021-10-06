@@ -11,9 +11,23 @@
   border: 2px solid $black;
   @include bold(18);
   
+  &.contact-number {
+    @media only screen and (max-width: rem-calc(900)) {
+      @include bold(14);
+      padding: rem-calc(5 10);
+      letter-spacing: rem-calc(0);
+    }
+  }
+
+
+  
   svg {
     transform: scale(.7);
     margin-right: rem-calc(16);
+    
+    @media only screen and (max-width: rem-calc(900)) {
+      margin-right: rem-calc(5);
+    }
   }
   
   &:hover {
@@ -23,7 +37,7 @@
   &-secondary {
     background-color: $white;
     color: $black;
-
+    
     &:hover {
       animation: shadow-move 0.3s ease-in both;
     }

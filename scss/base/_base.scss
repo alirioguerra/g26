@@ -25,11 +25,9 @@ a {
 
 p {
   @include regular(25);
-  line-height: rem-calc(36);
   
   @media only screen and (max-width: rem-calc(900)) {
     @include regular(18);
-    line-height: rem-calc(20);
   }
 }
 
@@ -69,7 +67,6 @@ section[padding] {
 .basic-title {
   @include bold(40);
   letter-spacing: rem-calc(4);
-  line-height: rem-calc(42);
   text-transform: uppercase;
   color: $black;
   margin-bottom: rem-calc(20);
@@ -77,7 +74,6 @@ section[padding] {
   @media only screen and (max-width: rem-calc(900)) {
     @include bold(22);
     letter-spacing: rem-calc(2);
-    line-height: rem-calc(22);
   }
   
   &[spaced] {
@@ -88,26 +84,22 @@ section[padding] {
 .basic-subtitle {
   @include medium(25);
   letter-spacing: rem-calc(0);
-  line-height: rem-calc(30);
   text-transform: uppercase;
   color: $black;
   
   @media only screen and (max-width: rem-calc(900)) {
     @include bold(18);
-    line-height: rem-calc(18);
   }
 }
 
 .quote {
   @include medium(33);
-  line-height: rem-calc(40);
   text-transform: uppercase;
   color: $black;
   margin: rem-calc(80 0 0 0);
   
   @media only screen and (max-width: rem-calc(900)) {
     @include medium(22);
-    line-height: rem-calc(26);
     text-transform: uppercase;
     margin: rem-calc(40 0 0 0);
   }
@@ -118,7 +110,6 @@ section[padding] {
     
     @media only screen and (max-width: rem-calc(900)) {
       @include bold(22);
-      line-height: rem-calc(26);
     }
   }
 }
@@ -203,7 +194,6 @@ section[padding] {
     
     @media only screen and (max-width: rem-calc(900)) {
       @include bold(45)
-      line-height: rem-calc(45);
       letter-spacing: rem-calc(2);
     }
   }
@@ -245,14 +235,12 @@ section[padding] {
     
     h2 {
       @include bold(40);
-      line-height: rem-calc(40);
       color: $white;
       text-transform: uppercase;
       margin: rem-calc(0 0 50 0);
       
       @media only screen and (max-width: rem-calc(900)) {
         @include bold(22);
-        line-height: rem-calc(22);
       }
     }
     
@@ -280,7 +268,6 @@ section[padding] {
     p {
       max-width: rem-calc(340);
       font-size: rem-calc(18);
-      line-height: rem-calc(21);
       color: $white;
     }
     span {
@@ -411,13 +398,11 @@ section[padding] {
     
     h2 {
       @include bold(70);
-      line-height: rem-calc(70);
       text-transform: uppercase;
       color: $white;
       
       @media only screen and (max-width: rem-calc(900)) {
         @include bold(60);
-        line-height: rem-calc(60);
         margin-bottom: rem-calc(30);
       }
     }
@@ -439,7 +424,7 @@ section[padding] {
         margin-bottom: rem-calc(30);
         @include regular(20);
         
-        &::placeholder {
+        &::placeholder, &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder, &:-moz-placeholder {
           color: $white;
         }
         

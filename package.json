@@ -24,7 +24,9 @@
   "homepage": "https://github.com/alirioguerra/g26#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-sass": "^5.0.0",
+    "gulp-version-number": "^0.2.4",
     "node-sass": "^6.0.1"
   },
   "dependencies": {}

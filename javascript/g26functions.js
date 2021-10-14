@@ -1,4 +1,13 @@
-AOS.init();
+
+ScrollReveal().reveal('.headline', {
+  reset: true,
+  distance: '120%',
+  origin: 'bottom',
+  duration: 1000,
+  easing: 'cubic-bezier(0.5, 0, 0, 1)',
+  interval: 1
+});
+
 
 (() => {
   window.addEventListener("scroll", () => {

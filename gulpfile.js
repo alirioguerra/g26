@@ -5,8 +5,6 @@ const sass = require('gulp-sass')(require('node-sass'));
 const autoprefixer = require('gulp-autoprefixer');
 
 
-
-
 gulp.task('default', watch)
 gulp.task('sass', compilerSass)
 

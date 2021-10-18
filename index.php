@@ -1,29 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="flickity.css?v=636d4eb699384fed677cef35eb96c154">
-   <link rel="stylesheet" href="style.css?v=636d4eb699384fed677cef35eb96c154">
-   <title>G26 TALENT</title>
-</head>
+<?php get_header(); ?>
 <body>
-   <header id="main-header" class="main-header">
-      <div class="container">
-         <nav>
-            <a href="/">
-               <img src="./assets/images/logo.svg" alt="Logo G26">
-            </a>
-            <a desktop href="https://api.whatsapp.com/send?phone=5561999585262" target="_blank" class="btn contact-number">
-               <svg width="27" height="27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="m6.13 24.826-5.109 1.34 1.364-4.98-.32-.51a13.46 13.46 0 0 1-2.065-7.182C.003 6.054 6.06 0 13.506 0a13.41 13.41 0 0 1 9.544 3.958A13.411 13.411 0 0 1 27 13.505C26.997 20.946 20.941 27 13.5 27h-.005c-2.423 0-4.799-.651-6.871-1.881l-.493-.293Zm15.553-7.46c-.101-.168-.372-.27-.778-.473-.406-.203-2.4-1.184-2.773-1.32-.372-.135-.643-.203-.913.203s-1.048 1.32-1.285 1.59c-.237.271-.474.305-.88.102-.405-.203-1.713-.631-3.263-2.013-1.207-1.076-2.021-2.405-2.258-2.81-.236-.407-.025-.626.178-.829.183-.182.406-.474.609-.71.203-.237.27-.407.406-.677.135-.271.067-.508-.034-.711-.101-.203-.913-2.2-1.251-3.012-.33-.791-.664-.684-.913-.697a16.128 16.128 0 0 0-.778-.014c-.27 0-.71.101-1.082.508-.372.406-1.42 1.387-1.42 3.384 0 1.997 1.453 3.926 1.656 4.197.203.27 2.862 4.368 6.933 6.126a23.3 23.3 0 0 0 2.314.854c.972.31 1.857.265 2.556.161.78-.117 2.401-.981 2.74-1.929.337-.948.337-1.76.236-1.93Z" fill="currentColor"/>
-               </svg>
-               (61) 99958-5262
-            </a>
-         </nav>
-      </div>
-   </header>
    <main>
       <section id="main-hero">
          <div class="container">
@@ -143,18 +119,18 @@
          <div id="partners-content">
             <a  href="facebook.com">
                <img  class="headline"
-               src="./assets/images/facebook-logo.png"
+               src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/facebook-logo.png"
                alt="logo"
                >
             </a><a  href="facebook.com">
                <img  class="headline"
-               src="./assets/images/facebook-logo.png"
+               src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/facebook-logo.png"
                alt="logo"
                >
             </a>
             <a  href="facebook.com">
                <img  class="headline"
-               src="./assets/images/facebook-logo.png"
+               src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/facebook-logo.png"
                alt="logo"
                >
             </a>
@@ -163,33 +139,4 @@
       </div>
    </section>
 </main>
-<footer id="main-footer">
-   <div class="container">
-      <div id="main-footer--contact">
-         <form  id="main-footer--contact__form" action="./mail/send-mail.php"  method="post" enctype="application/json">
-            <input type="text" name="name" id="name" placeholder="Seu nome">
-            <input type="email" name="email" id="email" placeholder="Seu e-mail">
-            <input type="text" name="subject" id="subject" placeholder="Assunto da mensagem">
-            <textarea name="message" id="message" cols="30" rows="10" placeholder="Sua mensagem"></textarea>
-            <button type="submit" class="btn btn-secondary">enviar</button>
-         </form>
-         <h2 class="headline">
-            Como <br/> podemos <br/> ajudar <br/> você?
-         </h2>
-      </div>
-      <div  class="headline" id="copyright">
-         <img src="./assets/images/logo-negative.svg" alt="logo g26">
-         <p id="copyright-text">g26, todos os direitos reservados - 2021</p>
-         <a href="mailto:atendimento@g26talent.com.br" target="_blank">
-            atendimento@g26talent.com.br
-         </a>
-      </div>
-   </div>
-</footer>
-<script src="./javascript/gsap/gsap.min.js?v=636d4eb699384fed677cef35eb96c154"></script>
-<script src="./javascript/gsap/SplitText.min.js?v=636d4eb699384fed677cef35eb96c154"></script>
-<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js?v=636d4eb699384fed677cef35eb96c154"></script>
-<script src="./javascript/flickity.js?v=636d4eb699384fed677cef35eb96c154"></script>
-<script src="./javascript/g26functions.js?v=636d4eb699384fed677cef35eb96c154"></script>
-</body>
-</html>
+<?php get_footer(); ?>

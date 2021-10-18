@@ -37,6 +37,7 @@
   &-secondary {
     background-color: $white;
     color: $black;
+    width: 100%;
     
     &:hover {
       animation: shadow-move 0.3s ease-in both;

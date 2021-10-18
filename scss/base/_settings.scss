@@ -2,11 +2,10 @@ $primary: #FCAF16;
 $black: #4D4D4D;
 $white: #FFFFFF;
 
-@import url('http://fonts.cdnfonts.com/css/gotham');
 
 
 @mixin regular($size: $rem-base) {
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Gotham Book', sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: rem-calc($size);
@@ -14,7 +13,7 @@ $white: #FFFFFF;
 }
 
 @mixin medium($size: $rem-base) {
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Gotham Medium', sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: rem-calc($size);

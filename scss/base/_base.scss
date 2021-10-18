@@ -413,44 +413,65 @@ section[padding] {
     }
     
     &__form {
-      display: flex;
-      flex-direction: column;
+      padding: 0 !important;
+      margin: 0 !important;
       
       @media only screen and (max-width: rem-calc(900)) {
-        max-width: rem-calc(345);
+        max-width: rem-calc(335);
         order: 2;
       }
+      
       .wpcf7-not-valid-tip {
-          display: none;
+        display: none;
       }
-
+      
       .wpcf7-response-output {
         @include regular(18);
         text-align: center;
         color: $black;
         border-color: transparent;
       }
-
-      p {
-        margin: 0;
-
-        span .input {
-          display: block;
-          max-width: 94%;
-          background-color: transparent;
-          color: $white;
-          border: 2px solid $white;
-          padding: rem-calc(15 10);
-          margin-bottom: rem-calc(30);
-          @include regular(20);
-          
-          &::placeholder, &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder, &:-moz-placeholder {
-            color: $white;
-          }
-          
-          &:focus {
-            outline: none;
-          }
+      
+      .input {
+        display: block;
+        width: 98%;
+        background-color: transparent;
+        color: $white;
+        border: 2px solid $white;
+        min-height: rem-calc(45);
+        margin-bottom: rem-calc(30) !important;
+        @include regular(20);
+        
+        &::-webkit-input-placeholder {
+          color:white;
+          opacity: 1;
+          visibility: visible;
+          z-index: 99;
+        }
+        
+        &::-moz-placeholder {
+          color:white;
+          opacity: 1;
+          visibility: visible;
+          z-index: 99;
+        }
+        
+        &::-ms-placeholder {
+          color:white;
+          opacity: 1;
+          visibility: visible;
+          z-index: 99;
+        }
+        
+        &::placeholder {
+          color:white;
+          opacity: 1;
+          visibility: visible;
+          z-index: 99;
+        }
+        
+        &:focus {
+          outline: none;
         }
       }
     }

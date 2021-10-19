@@ -339,17 +339,30 @@ section[padding] {
   &-content {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: column;
+    gap: rem-calc(20);
     padding: rem-calc(50 0);
     
     @media only screen and (max-width: rem-calc(900)) {
-      grid-template-columns: 1fr;
-      padding: rem-calc(10 0);
+      
+    grid-auto-flow: row;
     }
     
-    img {
-      max-width: rem-calc(200);
+    :nth-child(n) {
+      align-self: ce;
+    }
+
+    a:hover {
+      img {
+        filter: grayscale(0);
+      }
+    }
+
+    a img {
+      max-width: rem-calc(170);
       justify-self: center;
+      filter: grayscale(1);
+      transition: all .34s ease;
       
       @media only screen and (max-width: rem-calc(900)) {
         max-width: rem-calc(150);

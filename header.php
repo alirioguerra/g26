@@ -8,6 +8,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php wp_head(); ?>
+
+  <meta name="author" content="g26Talent">
+  <meta name="title" content="g26Talent">
+  <meta name="description" content="Uma empresa especializada em transformar redes sociais de influenciadores digitais em canais de mídia.">
+  <meta name="keywords" content="influenciadores digitais, mídia digital, redes sociais">
+
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://www.g26talent.com.br">
+  <meta property="og:site_name" content="G26 Talent">
+  <meta property="og:description"
+    content="Uma empresa especializada em transformar redes sociais de influenciadores digitais em canais de mídia.">
+  <meta property="og:image" content="https://www.g26talent.com.br/opengraph.png">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="600">
+  <meta property="og:type" content="website">
 </head>
 
 <header id="main-header" class="main-header">

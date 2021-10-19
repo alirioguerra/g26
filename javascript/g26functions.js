@@ -1,3 +1,12 @@
+
+
+var flkty = new Flickity( '.main-carousel', {
+  imagesLoaded: true,
+  pageDots: false,
+  cellAlign: "center",
+  contain: true
+});
+
 ScrollReveal().reveal('.headline', {
   reset: true,
   distance: '120%',

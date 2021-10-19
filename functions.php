@@ -22,9 +22,10 @@ function custom_custom_form_class_attr( $class ) {
 function g26_scripts() {
   wp_register_script('gsap', get_template_directory_uri() . '/javascript/gsap/gsap.min.js', [], false, true);
   wp_register_script('splittext', get_template_directory_uri() . '/javascript/gsap/SplitText.min.js', [], false, true);
+  wp_register_script('imagesloaded', get_template_directory_uri() . '/javascript/imagesloaded.js', [], false, true);
   wp_register_script('flickity', get_template_directory_uri() . '/javascript/flickity.js', [], false, true);
   wp_register_script('scrollreveal', get_template_directory_uri() . '/javascript/scrollreveal.min.js', [], false, true);
-  wp_register_script('script', get_template_directory_uri() . '/javascript/g26functions.js', ['gsap', 'splittext', 'flickity', 'scrollreveal'], false, true);
+  wp_register_script('script', get_template_directory_uri() . '/javascript/g26functions.js', ['gsap', 'splittext', 'imagesloaded', 'flickity', 'scrollreveal'], false, true);
   wp_enqueue_script('script');
 }
 add_action('wp_enqueue_scripts', 'g26_scripts');

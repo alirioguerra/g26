@@ -60,17 +60,19 @@
           </ul>
         </div>
       </div>
-      <div class="main-carousel" data-flickity='{
-   "pageDots": false,
-   "cellAlign": "center",
-   "contain": true
-}'>
+      <div class="main-carousel">
         <div class="carousel-cell">
           <p>
-            O engajamento de nano influenciadores chega a ser seis vezes maior do que o de um influenciador
-            de massa.
+            "O engajamento de nano influenciadores chega a ser seis vezes maior do que o de um influenciador
+            de massa."
           </p>
           <span>(fonte: AirInfluencers)</span>
+        </div>
+        <div class="carousel-cell">
+          <p>
+          “92% dos consumidores ao redor do mundo afirmam que confiam totalmente na indicação de um amigo ou familiar, acima de qualquer outra forma de propaganda”
+          </p>
+          <span> (fonte: Nielsen)</span>
         </div>
       </div>
     </section>
@@ -143,12 +145,12 @@
               alt="Coren DF">
           </a>
           <a href="https://www.superzonbrasil.com.br/" target="_blank">
-            <img class="headline" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/superzon_logo.png"
-              alt="Superzon">
+            <img class="headline"
+              src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/superzon_logo.png" alt="Superzon">
           </a>
           <a href="https://www.ironbag.com.br/" target="_blank">
-            <img class="headline" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/ironbag_logo.png"
-              alt="Iron Bag">
+            <img class="headline"
+              src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/ironbag_logo.png" alt="Iron Bag">
           </a>
         </div>
         <div class="bottom-line"></div>

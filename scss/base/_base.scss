@@ -222,6 +222,10 @@ section[padding] {
   background-size: cover;
   position: relative;
   z-index: 0;
+
+  @media only screen and (max-width: rem-calc(900)) {
+    padding: 1.875rem 0 0 0;
+  }
   
   &-content {
     max-width: rem-calc(700);
@@ -265,18 +269,20 @@ section[padding] {
   top: 0;
   
   @media only screen and (max-width: rem-calc(900)) {
-    display: none;
+    max-width: 100%;
+    padding: rem-calc(50 10);
+    position: relative;
   }
   
   .carousel-cell {
     width: 100%;
     p {
-      max-width: rem-calc(340);
-      font-size: rem-calc(18);
-      color: $white;
+      max-width: rem-calc(350);
+      color: $black;
+      @include bold(22);
     }
     span {
-      color: transparentize($white, .5);
+      color: transparentize($white, .2);
       @include regular(18);
     }
   }
